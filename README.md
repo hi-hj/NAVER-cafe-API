@@ -1,6 +1,7 @@
-#동아리 홈페이지 이사
+# 동아리 홈페이지 이사
 
 XpressEngine 기반 홈페이지를 네이버 카페로 이전했습니다.
+
 웹 크롤러를 개발하여 기존 게시물을 저장했고, 네이버 카페 API를 활용하여 게시글을 작성했습니다.
 <div>
 <img src="https://img.shields.io/badge/BeautifulSoup-4.9.0-orange?style=flat-square" />
@@ -11,17 +12,16 @@ XpressEngine 기반 홈페이지를 네이버 카페로 이전했습니다.
 <img src="https://img.shields.io/badge/Django-3.1.4-blue?style=flat-square" />
 </div>
 <div>
-<img src="https://img.shields.io/badge/NAVER%20api-cafe-brightgreen?style=flat-square" />
-<img src="https://img.shields.io/badge/NAVER%20api-login-brightgreen?style=flat-square" />
+<img src="https://img.shields.io/badge/NAVER-cafe-brightgreen?style=flat-square" />
+<img src="https://img.shields.io/badge/NAVER-login-brightgreen?style=flat-square" />
 </div>
 
 - - -
 
-### 웹 크롤링 : [web_crawler.py](https://github.com/HYUcoolguy/FAFA/blob/main/Back-End/FAFA/models.py)
+### 웹 크롤링 : [web_crawler.py](https://github.com/HYUcoolguy/NAVER-cafe-API/blob/main/web_crawler.py)
 03년부터 20년까지 축적된 게시물(게시글/댓글)을 추출
 > BeautifoulSoup, Selenium 활용
 > SQlite3에 데이터를 저장
-
 
 1. DB 연결 & 세팅
 2. ChromeDriver 실행
@@ -33,13 +33,13 @@ XpressEngine 기반 홈페이지를 네이버 카페로 이전했습니다.
 
 1. 네이버 개발자 센터
 
-'애플리케이션 등록'
-> 사용 API : 카페
-> 서비스 환경 : PC 웹 (로컬에서만 실행)
-> 서비스 URL : http://127.0.0.1:8000/
-> Callback URL : http://127.0.0.1:8000/
+    '애플리케이션 등록'
+    > 사용 API : 카페 <br>
+    > 서비스 환경 : PC 웹 (로컬에서만 실행) <br>
+    > 서비스 URL : http://127.0.0.1:8000/ <br>
+    > Callback URL : http://127.0.0.1:8000/
 
-*관리자 계정 외에 API 사용 시, **멤버관리**에서 ID 추가*
+    *관리자 계정 외에 API 사용 시, **멤버관리**에서 ID 추가*
 
 2. access token 발급 : [get_token.py](https://github.com/HYUcoolguy/FAFA/blob/main/Back-End/FAFA/models.py) 
 
