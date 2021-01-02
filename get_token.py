@@ -6,13 +6,13 @@ import base64
 redirect_uri= "http://127.0.0.1:8000/"
 
 # 오픈API 등록후 발급
-client_id ="ZuAQtsIocbgfFWP5o57p" # Your Client_ID
-client_secret = "5amDFYIIAu"
-state = "REWERWERTATE"
+client_id ="*****" # Your Client_ID
+client_secret = "*****"
+state = "REWERWERTATE" # 아무 텍스트 와도 상관 없음
 
 
 # 1차로 코드 발급해야합니다.
-code = "jTQjfSHPZU5rcgW4E6"
+code = ""
 # 2차로 발급받은 코드로 액세스 코드를 발급받아야 합니다.
 access_token = ""
 
