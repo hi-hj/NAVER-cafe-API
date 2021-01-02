@@ -85,6 +85,6 @@ for row in cur.execute("SELECT * FROM YB_BOARD_TEST ORDER BY 1 DESC LIMIT 200 OF
 ~~~
 
 *제목, 본문에 " 가 있으면 에러가 발생하는 현상 있음. " 를 ' 로 변경하면 해결할 수 있다*
-~~~json
+~~~
 content = urllib.parse.quote(row[4].replace('\"', '\''))
 ~~~
