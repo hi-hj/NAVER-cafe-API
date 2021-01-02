@@ -69,7 +69,7 @@ access_token = "" //여기는 계속 비웁니다.
 3. 파일 실행
 
 *한글 깨짐 현상 : 개발자 센터 코드대로 하면 한글 깨짐 현상이 있다. 아래처럼 코드를 변경하면 정상적으로 인코딩 된다.*
-~~~json
+~~~
 //네이버 개발자 센터 API 명세
 data = "subject=" + subject + "&content=" + content
 request = urllib.request.Request(url, data=data.encode("utf-8"))
