@@ -61,7 +61,7 @@ access_token = "" //여기는 계속 비웁니다.
 
 - - -
 
-#### 3. 네이버 카페 글쓰기 : [naver_write.py](https://github.com/HYUcoolguy/FAFA/blob/main/Back-End/FAFA/models.py) 
+#### 3. 네이버 카페 글쓰기 : [naver_write.py](https://github.com/HYUcoolguy/NAVER-cafe-API/blob/main/naver_write.py) 
 
 1. get_token.py 에서 얻은 access_token 값 입력 <br>
 *token 유효 시간이 1시간이므로 주의* <br>
@@ -71,5 +71,10 @@ access_token = "" //여기는 계속 비웁니다.
 *한글 깨짐 현상 : 개발자 센터 코드대로 하면 한글 깨짐 현상이 있다. 아래처럼 코드를 변경하면 정상적으로 인코딩 된다.*
 
 *403 error : 첫 번째 함수는 정상 작동되지만, 두 번째 함수에서 403 error가 발생하는 경우. 함수 호출에 딜레이를 주면 해결할 수 있다. (403 error는 그 외에도 원인이 많음)*
+~~~json
+for row in cur.execute("SELECT * FROM YB_BOARD_TEST ORDER BY 1 DESC LIMIT 200 OFFSET 1422"):
+    naver_upload()
+    time.sleep(10) //딜레이 추가
+~~~
 
 *제목, 본문에 " 가 있으면 에러가 발생하는 현상 있음.  text.replace('\"', '\'') 사용하여 해결*
