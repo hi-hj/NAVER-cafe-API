@@ -31,7 +31,7 @@ XpressEngine 기반 홈페이지를 네이버 카페로 이전했습니다.
 - - -
 ### 네이버 카페 API
 
-1. [네이버 개발자 센터](https://developers.naver.com)
+**1. [네이버 개발자 센터]**(https://developers.naver.com)
 
     '애플리케이션 등록'
     > 사용 API : 카페 <br>
@@ -41,22 +41,22 @@ XpressEngine 기반 홈페이지를 네이버 카페로 이전했습니다.
 
     *관리자 계정 외에 API 사용 시, **멤버관리**에서 ID 추가*
 
-2. access token 발급 : [get_token.py](https://github.com/HYUcoolguy/NAVER-cafe-API/blob/main/get_token.py) 
+**2. access token 발급 : **[get_token.py](https://github.com/HYUcoolguy/NAVER-cafe-API/blob/main/get_token.py) 
 
-    > 1) 웹에서 사용할 계정으로 로그인 <br>
-    > 2) 파일 실행 <br>
-    > 2.2) console 창의 URL 클릭하여, code 값 확인
+    1. 웹에서 사용할 계정으로 로그인
+    2. 파일 실행
+    3. console 창의 URL 클릭하여, code 값 확인
 
     ~~~json
     code = "" // 여기에 추가!
     access_token = "" //여기는 계속 비웁니다.
     ~~~
 
-    > 3) 파일 내 code에 해당 값 추가 <br>
-    > 4) 다시 파일 실행 <br>
-    > 4.2) cosnole 창에서 **access_token** 값 확인
+    4. 파일 내 code에 해당 값 추가 <br>
+    5. 다시 파일 실행 <br>
+    6. cosnole 창에서 **access_token** 값 확인
 
-3. 네이버 카페 글쓰기 : [naver_write.py](https://github.com/HYUcoolguy/FAFA/blob/main/Back-End/FAFA/models.py) 
+**3. 네이버 카페 글쓰기 :** [naver_write.py](https://github.com/HYUcoolguy/FAFA/blob/main/Back-End/FAFA/models.py) 
 
     > 1) get_token.py 에서 얻은 access_token 값 입력 <br>
     > *token 유효 시간이 1시간이므로 주의* <br>
