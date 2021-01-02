@@ -69,7 +69,14 @@ access_token = "" //여기는 계속 비웁니다.
 3. 파일 실행
 
 *한글 깨짐 현상 : 개발자 센터 코드대로 하면 한글 깨짐 현상이 있다. 아래처럼 코드를 변경하면 정상적으로 인코딩 된다.*
-
+~~~json
+//네이버 개발자 센터 API 명세
+data = "subject=" + subject + "&content=" + content
+request = urllib.request.Request(url, data=data.encode("utf-8"))
+// 아래와 같이 변경합니다.
+data = urlencode({'subject': subject, 'content': content}).encode()
+request = urllib.request.Request(url, data=data)
+~~~
 *403 error : 첫 번째 함수는 정상 작동되지만, 두 번째 함수에서 403 error가 발생하는 경우. 함수 호출에 딜레이를 주면 해결할 수 있다. (403 error는 그 외에도 원인이 많음)*
 ~~~json
 for row in cur.execute("SELECT * FROM YB_BOARD_TEST ORDER BY 1 DESC LIMIT 200 OFFSET 1422"):
@@ -77,4 +84,7 @@ for row in cur.execute("SELECT * FROM YB_BOARD_TEST ORDER BY 1 DESC LIMIT 200 OF
     time.sleep(10) //딜레이 추가
 ~~~
 
-*제목, 본문에 " 가 있으면 에러가 발생하는 현상 있음.  text.replace('\"', '\'') 사용하여 해결*
+*제목, 본문에 " 가 있으면 에러가 발생하는 현상 있음. " 를 ' 로 변경하면 해결할 수 있다*
+~~~json
+content = urllib.parse.quote(row[4].replace('\"', '\''))
+~~~
