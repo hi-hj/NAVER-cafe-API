@@ -42,6 +42,8 @@ XpressEngine 기반 홈페이지를 네이버 카페로 이전했습니다.
 
 *관리자 계정 외에 API 사용 시, **멤버관리**에서 ID 추가*
 
+- - -
+
 #### 2. access token 발급 : [get_token.py](https://github.com/HYUcoolguy/NAVER-cafe-API/blob/main/get_token.py) 
 
 1. 웹에서 사용할 계정으로 로그인
@@ -56,6 +58,8 @@ access_token = "" //여기는 계속 비웁니다.
 4. 파일 내 code에 해당 값 추가 <br>
 5. 다시 파일 실행 <br>
 6. cosnole 창에서 **access_token** 값 확인
+
+- - -
 
 #### 3. 네이버 카페 글쓰기 : [naver_write.py](https://github.com/HYUcoolguy/FAFA/blob/main/Back-End/FAFA/models.py) 
 
