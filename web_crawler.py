@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 
 
 # 1. DB 연결 / 세팅
-#DB : sqlite3
+## DB : sqlite3
 DB = 'YB_BOARD.db'
 BOARD_NAME = 'YB_BOARD_TEST'
 conn = sqlite3.connect(DB)
