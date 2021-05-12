@@ -34,7 +34,6 @@ assert "한양대학교 스킨스쿠버 다이빙클럽" in driver.title
 
 
 # 3. 원하는 사이트에 로그인 (로그인이 필요한 경우에만)
-# 1차 로그인
 usr = '##########'
 pwd = '##########'
 elem = driver.find_element_by_id("fo_login_widget")
@@ -44,16 +43,6 @@ elem.send_keys(usr)
 elem = driver.find_element_by_id("user_pw")
 elem.send_keys(pwd)
 elem.send_keys(Keys.RETURN)
-# 2차 로그인 (확인 버튼)
-elem = driver.find_element_by_css_selector('div.login-body > p > a')
-elem.click()
-# 3차 로그인 
-elem = driver.find_element_by_id("uid")
-elem.send_keys(usr)
-elem = driver.find_element_by_id("upw")
-elem.send_keys(pwd)
-elem.send_keys(Keys.RETURN)
-# 4차 로그인
 driver.refresh()
 driver.get('http://hyuscuba.com/xe/ybboard')
 
