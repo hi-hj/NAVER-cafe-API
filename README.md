@@ -50,9 +50,9 @@ XpressEngine 기반 홈페이지를 네이버 카페로 이전했습니다.
 2. 파일 실행
 3. console 창의 URL 클릭하여, code 값 확인
 
-~~~json
+~~~
 code = "" // 여기에 추가!
-access_token = "" //여기는 계속 비웁니다.
+access_token = `` //여기는 계속 비웁니다.
 ~~~
 
 4. 파일 내 code에 해당 값 추가 <br>
@@ -78,7 +78,7 @@ data = urlencode({'subject': subject, 'content': content}).encode()
 request = urllib.request.Request(url, data=data)
 ~~~
 *403 error : 첫 번째 함수는 정상 작동되지만, 두 번째 함수에서 403 error가 발생하는 경우. 함수 호출에 딜레이를 주면 해결할 수 있다. (403 error는 그 외에도 원인이 많음)*
-~~~json
+~~~
 for row in cur.execute("SELECT * FROM YB_BOARD_TEST ORDER BY 1 DESC LIMIT 200 OFFSET 1422"):
     naver_upload()
     time.sleep(10) //딜레이 추가
